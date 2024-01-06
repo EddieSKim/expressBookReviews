@@ -39,11 +39,15 @@ public_users.get('/', function (req, res) {
       console.log(error.message);
     })
 
-  // if (books) {
-  //   return res.status(200).send(JSON.stringify({ books }, null, 4));
-  // }
-  // // error no books in database
-  // return res.status(400).json({ message: "No books in database" });
+  /*
+
+  ---Task 1---
+
+  if (books) {
+    return res.status(200).send(JSON.stringify({ books }, null, 4));
+  }
+  return res.status(400).json({ message: "No books in database" });
+  */
 });
 
 // Get book details based on ISBN
@@ -68,15 +72,19 @@ public_users.get('/isbn/:isbn', function (req, res) {
       console.log(error.message);
     })
 
-  // if (isbn) {
-  //   const bookInfo = books[isbn];
-  //   if (!bookInfo) {
-  //     return res.status(400).json({ message: `Cannot find book with isbn number: ${isbn}` });
-  //   }
-  //   return res.status(200).send(JSON.stringify({ bookInfo }, null, 4));
-  // }
-  // // else return error message
-  // return res.status(400).json({ message: "No isbn given" });
+  /*
+
+  ---Task 2---
+
+  if (isbn) {
+    const bookInfo = books[isbn];
+    if (!bookInfo) {
+      return res.status(400).json({ message: `Cannot find book with isbn number: ${isbn}` });
+    }
+    return res.status(200).send(JSON.stringify({ bookInfo }, null, 4));
+  }
+  return res.status(400).json({ message: "No isbn given" });
+  */
 });
 
 // Get book details based on author
@@ -101,15 +109,18 @@ public_users.get('/author/:author', function (req, res) {
       console.log(error.message);
     })
 
-  // if (author) {
-  //   const bookInfo = Object.values(books).filter(book => book.author === author);
-  //   if (!bookInfo) {
-  //     return res.status(400).json({ message: `Cannot find any books under the author name: ${author}` });
-  //   }
-  //   return res.status(200).send(JSON.stringify({ bookInfo }, null, 4));
-  // }
-  // // else return error message
-  // return res.status(400).json({ message: "No author given" });
+  /*
+
+  ---Task 3---
+
+  if (author) {
+    const bookInfo = Object.values(books).filter(book => book.author === author);
+    if (!bookInfo) {
+      return res.status(400).json({ message: `Cannot find any books under the author name: ${author}` });
+    }
+    return res.status(200).send(JSON.stringify({ bookInfo }, null, 4));
+  }
+  return res.status(400).json({ message: "No author given" });*/
 });
 
 // Get all books based on title
@@ -134,14 +145,18 @@ public_users.get('/title/:title', function (req, res) {
       console.log(error.message);
     })
 
-  // if (title) {
-  //   const bookInfo = Object.values(books).filter(book => book.title === title);
-  //   if (!bookInfo) {
-  //     return res.status(400).json({ message: `Cannot find any books with the title: ${title}` });
-  //   }
-  //   return res.status(200).send(JSON.stringify({ bookInfo }, null, 4));
-  // }
-  // return res.status(400).json({ message: "No title given" });
+  /*
+
+  ---Task 4---
+  
+  if (title) {
+    const bookInfo = Object.values(books).filter(book => book.title === title);
+    if (!bookInfo) {
+      return res.status(400).json({ message: `Cannot find any books with the title: ${title}` });
+    }
+    return res.status(200).send(JSON.stringify({ bookInfo }, null, 4));
+  }
+  return res.status(400).json({ message: "No title given" });*/
 });
 
 //  Get book review
